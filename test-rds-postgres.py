@@ -103,7 +103,7 @@ def transfer_funds(conn, frm, to, amount):
     conn.commit()
     logging.debug("transfer_funds(): status message: {}".format(cur.statusmessage))
 
-
+delete_table(db_connection)
 create_accounts(db_connection)
 query(db_connection)
 
