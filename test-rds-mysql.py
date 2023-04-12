@@ -15,7 +15,7 @@ if jresponse['status'] != "DB binding ok":
   exit(1)
 sb = binding.ServiceBinding()
 print(sb.all_bindings())
-bindings_list = sb.bindings('mysql', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+bindings_list = sb.bindings('mysql', 'OpenShift Database Access / Amazon Relational Database Service (RDS)')
 print(bindings_list[0])
 db_connection = mysql.connector.connect(database=bindings_list[0].get('database'), \
     user=bindings_list[0].get('username'), \

@@ -14,7 +14,8 @@ if jresponse['status'] != "DB binding ok":
   print(jresponse['status'])
   exit(1)
 sb = binding.ServiceBinding()
-bindings_list = sb.bindings('postgresql', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+#bindings_list = sb.bindings('postgresql', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+bindings_list = sb.bindings('postgresql', 'OpenShift Database Access / Amazon Relational Database Service (RDS)')
 print(bindings_list[0].get('database'), '\n', \
     bindings_list[0].get('username'), '\n', \
     bindings_list[0].get('password'), '\n', \

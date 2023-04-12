@@ -81,7 +81,7 @@ def main():
         exit(1)
     sb = binding.ServiceBinding()
     print(f"\nBINDINGS:\n{sb.all_bindings()}\n")
-    bindings_list = sb.bindings('sqlserver', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+    bindings_list = sb.bindings('sqlserver', 'OpenShift Database Access / Amazon Relational Database Service (RDS)')
     
     # CONNECT TO SQLSERVER
     connection = pymssql.connect(bindings_list[0]["host"],

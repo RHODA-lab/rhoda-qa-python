@@ -93,7 +93,8 @@ def main():
         exit(1)
     sb = binding.ServiceBinding()
     print(sb.all_bindings())
-    bindings_list = sb.bindings('oracle', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+    #bindings_list = sb.bindings('oracle', 'Red Hat DBaaS / Amazon Relational Database Service (RDS)')
+    bindings_list = sb.bindings('oracle', 'OpenShift Database Access / Amazon Relational Database Service (RDS)')
 
     # CONNECT TO ORACLE
     dsn = f'{bindings_list[0]["username"]}/{bindings_list[0]["password"]}@{bindings_list[0]["host"]}:{bindings_list[0]["port"]}/{bindings_list[0]["database"]}'
